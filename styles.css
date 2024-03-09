@@ -1,0 +1,81 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background-color: #008080;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#desktop {
+  width: 100%;
+  height: calc(100% - 1rem);
+  position: relative;
+}
+
+.shortcut {
+  display: inline-block;
+  background-color: #000080;
+  color: white;
+  padding: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.window {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  background-color: #c0c0c0;
+  border: 2px solid #000;
+  display: none;
+}
+
+.title-bar {
+  background: linear-gradient(to right, #000080, #0000a0);
+  color: white;
+  padding: 5px;
+  cursor: move;
+}
+
+.close-btn {
+  float: right;
+  cursor: pointer;
+  background-color: red;
+  border: none;
+  color: white;
+}
+
+footer {
+  background-color: #c0c0c0;
+}
+
+#nav {
+  padding: 0.5rem;
+}
+
+.window-content {
+  padding: 10px;
+}
+
+#taskbar {
+  border: 2px solid #000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #c0c0c0;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  z-index: 1000;
+}
+
+#start-button {
+  background: linear-gradient(to right, #000080, #0000a0);
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
