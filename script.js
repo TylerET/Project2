@@ -1,3 +1,4 @@
+"use strict";
 // z index counter so when you move a window it will appear over other windows
 let zIndexMax = 0;
 
@@ -91,14 +92,26 @@ function dragElement(element) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  dragElement(document.getElementById("aboutMeWindow"));
-  dragElement(document.getElementById("contactMeWindow"));
+  addEventListenerToWindows();
 });
+
+function addEventListenerToWindows() {
+  const windows = document.getElementsByClassName("window");
+  Array.from(windows).forEach((window) => {
+    dragElement(window);
+  });
+}
 
 function openWindow(id) {
   let element = document.getElementById(id);
   element.style.display = "block";
   dragElement(element);
+}
+
+function toggleNav() {
+  let element = document.getElementById("taskbarMenu");
+  let current = element.style.display;
+  element.style.display = current == "none" ? "block" : "none";
 }
 
 function closeWindow(id) {

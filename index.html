@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
     <div id="desktop">
-      <div class="shortcut" onclick="openWindow('aboutMeWindow')">About Me</div>
+      <div class="shortcut" onclick="openWindow('aboutMeWindow')"><img src='assets/display_properties-4.png' alt="Computer with paint brush and ruler icon"><p>About Me</p></div>
       <div class="shortcut" onclick="openWindow('contactMeWindow')">
-        Contact Me
+        <img src='assets/outlook_express-4.png' alt="Email icon"><p>Contact Me</p>
+      </div>
+      <div class="shortcut" onclick="openWindow('serviceAreaWindow')">
+        <img src='assets/globe_map-0.png' alt="Globe icon"><p>Coverage Area</p>
+      </div>
+      <div class="shortcut" onclick="openWindow('servicesWindow')">
+        <img src='assets/directory_closed-4.png' alt="Calendar icon"><p>Services</p>
       </div>
       <div id="aboutMeWindow" class="window">
         <div class="title-bar" id="aboutMeWindow-title-bar">
@@ -33,13 +39,58 @@
         <div class="window-content">Contact Me.</div>
         <div class="resize-handle" id="contactMeWindow-resize-handle"></div>
       </div>
-      <img src="assets/Fatdog-0001.gif" alt="dog">
+      <div id="serviceAreaWindow" class="window">
+        <div class="title-bar" id="serviceAreaWindow-title-bar">
+          Service Area
+          <button class="close-btn" onclick="closeWindow('serviceAreaWindow')">
+            X
+          </button>
+        </div>
+        <div class="window-content">Service Area</div>
+        <div class="resize-handle" id="serviceAreaWindow-resize-handle"></div>
+      </div>
+      <div id="servicesWindow" class="window">
+        <div class="title-bar" id="servicesWindow-title-bar">
+          Service Area
+          <button class="close-btn" onclick="closeWindow('servicesWindow')">
+            X
+          </button>
+        </div>
+        <div class="window-content">Services</div>
+        <div class="resize-handle" id="servicesWindow-resize-handle"></div>
+      </div>
+      <img src="assets/Fatdog-0001.gif" alt="dog" id="clippy">
     </div>
     <script src="script.js"></script>
   </body>
   <footer>
+    <div id="taskbarMenu">
+      <div class="taskMenuItem">
+        <button class="btn" id="aboutMeTaskMenu">  
+          <img src='assets/display_properties-4.png' alt="Computer with paint brush and ruler icon">
+          <p>About Me</p>
+        </button>
+      </div>
+      <div class="taskMenuItem">
+        <button class="btn" id="contactMeTaskMenu">  
+          <img src='assets/outlook_express-4.png' alt="Email icon"><p>Contact Me</p>
+        </button>
+      </div>
+      <div class="taskMenuItem">
+        <button class="btn" id="aboutMeTaskMenu">  
+          <img src='assets/globe_map-0.png' alt="Globe icon"><p>Coverage Area</p>
+
+        </button>
+      </div>
+      <div class="taskMenuItem">
+        <button class="btn" id="aboutMeTaskMenu">  
+          <img src='assets/directory_closed-4.png' alt="Calendar icon"><p>Services</p>
+
+        </button>
+      </div>
+    </div>
     <div id="taskbar">
-      <div id="start-button">Start</div>
+      <div id="start-button" class='btn' onclick='toggleNav()'>Navigation</div>
     </div>
   </footer>
 </html>

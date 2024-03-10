@@ -8,23 +8,31 @@ html {
 
 #desktop {
   width: 100%;
-  height: calc(100% - 1rem);
+  overflow: hidden;
+  height: calc(100% - 2rem);
   position: relative;
 }
 
 .shortcut {
-  display: inline-block;
-  background-color: #000080;
+  display: flex;
+  flex-direction: column;
+  max-width: 4rem;
   color: white;
   padding: 5px;
   margin: 10px;
   cursor: pointer;
 }
 
+.shortcut p {
+  text-align: center;
+}
+
 .window {
   width: 50vw;
   height: 40vh;
   position: absolute;
+  top: 1rem;
+  left: 1rem;
   background-color: #c0c0c0;
   border: 2px solid #000;
   display: none;
@@ -71,7 +79,7 @@ footer {
   z-index: 1000;
 }
 
-#start-button {
+.btn {
   cursor: pointer;
   border: none;
   border-width: 2px;
@@ -85,7 +93,7 @@ footer {
   border-radius: 1px;
 }
 
-#start-button:hover {
+.btn:hover {
   border: 2px inset #fff;
   background: silver;
   color: #424242;
@@ -111,11 +119,46 @@ iframe {
   cursor: nwse-resize;
 }
 
-img {
+#clippy {
   position: absolute;
   bottom: 2rem;
   right: 0;
   width: 300px;
   height: 300px;
   z-index: 0;
+}
+
+#taskbarMenu {
+  background-color: #c0c0c0;
+  display: none;
+  bottom: 3rem;
+  position: absolute;
+  border: 2px solid #000;
+  z-index: 2;
+  width: 30vw;
+  height: 50vh;
+}
+
+.taskMenuItem {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.taskMenuItem button {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+.taskMenuItem p {
+  font-size: larger;
+  font-weight: bolder;
+  margin-left: 1rem;
 }
