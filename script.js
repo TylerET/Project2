@@ -111,7 +111,8 @@ function openWindow(id) {
 function toggleNav() {
   let element = document.getElementById("taskbarMenu");
   let current = element.style.display;
-  element.style.display = current == "none" ? "block" : "none";
+  element.style.display =
+    current === "none" || current === "" ? "block" : "none";
 }
 
 function closeWindow(id) {

@@ -3,43 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
+    <title>Contact Me Form</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="subPages.styles.css" />
   </head>
   <body>
     <div id="desktop">
-      <div id="contact-container" class="contact-container">
-        <p>
-          Welcome to our cozy corner of the internet, where your furry,
-          feathered, and finned friends are treated like family! I'm Kara, the
-          heart and soul behind Pet's Under The Sun. My journey into pet sitting
-          started from a deep-rooted love for animals and a desire to create a
-          warm, nurturing environment for pets while their humans are away. With
-          years of experience under my belt, I've cared for a wide range of
-          pets, each with their own unique personalities and needs.
-        </p>
-
-        <p>
-          As a professional pet sitter, I understand the importance of trust and
-          reliability. That's why I'm committed to providing not just a service,
-          but a personalized experience for your pet. Whether it's their
-          favorite playtime activity, a special diet, or a needed medication, I
-          pay attention to the details that make your pet happy and healthy.
-        </p>
-
-        <p>
-          Safety and comfort are my top priorities. I'm certified in pet first
-          aid and continually educate myself on the best practices in pet care.
-          I believe in transparent communication, so you'll receive regular
-          updates and photos, ensuring peace of mind while you're away.
-        </p>
-
-        <p>
-          Let's make your pet's staycation as joyful and loving as it can be.
-          Because here, every wag, purr, and chirp is a language of love we
-          speak fluently!
-        </p>
+      <div class="contact-container" id="contact-container">
+        <form id="contact-form" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button type="submit" class="btn">Send</button>
+        </form>
       </div>
     </div>
     <script src="script.js"></script>

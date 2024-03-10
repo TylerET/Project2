@@ -6,16 +6,30 @@
     <title>Pets Under The Sun</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <body>
     <div id="desktop">
-      <div class="shortcut" onclick="openWindow('aboutMeWindow')"><img src='assets/display_properties-4.png' alt="Computer with paint brush and ruler icon"><p>About Me</p></div>
+      <div class="shortcut" onclick="openWindow('aboutMeWindow')">
+        <img
+          src="assets/display_properties-4.png"
+          alt="Computer with paint brush and ruler icon"
+        />
+        <p>About Me</p>
+      </div>
       <div class="shortcut" onclick="openWindow('contactMeWindow')">
-        <img src='assets/outlook_express-4.png' alt="Email icon"><p>Contact Me</p>
+        <img src="assets/outlook_express-4.png" alt="Email icon" />
+        <p>Contact Me</p>
       </div>
       <div class="shortcut" onclick="openWindow('serviceAreaWindow')">
-        <img src='assets/globe_map-0.png' alt="Globe icon"><p>Coverage Area</p>
+        <img src="assets/globe_map-0.png" alt="Globe icon" />
+        <p>Coverage Area</p>
       </div>
       <div class="shortcut" onclick="openWindow('servicesWindow')">
-        <img src='assets/directory_closed-4.png' alt="Calendar icon"><p>Services</p>
+        <img src="assets/directory_closed-4.png" alt="Calendar icon" />
+        <p>Services</p>
+      </div>
+      <div class="shortcut" onclick="openWindow('paintWindow')">
+        <img src="assets/paint_old-0.png" alt="Calendar icon" />
+        <p>Paint</p>
       </div>
       <div id="aboutMeWindow" class="window">
         <div class="title-bar" id="aboutMeWindow-title-bar">
@@ -36,7 +50,9 @@
             X
           </button>
         </div>
-        <div class="window-content">Contact Me.</div>
+        <div class="window-content">
+          <iframe src="contact.html" title="contact me"></iframe>
+        </div>
         <div class="resize-handle" id="contactMeWindow-resize-handle"></div>
       </div>
       <div id="serviceAreaWindow" class="window">
@@ -46,51 +62,94 @@
             X
           </button>
         </div>
-        <div class="window-content">Service Area</div>
+        <div class="window-content">
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1L8Yu2E6sujm0-mJ851ozlPRXDO4&hl=en&ehbc=2E312F"
+            width="640"
+            height="480"
+          ></iframe>
+        </div>
         <div class="resize-handle" id="serviceAreaWindow-resize-handle"></div>
       </div>
       <div id="servicesWindow" class="window">
         <div class="title-bar" id="servicesWindow-title-bar">
-          Service Area
+          Services
           <button class="close-btn" onclick="closeWindow('servicesWindow')">
             X
           </button>
         </div>
-        <div class="window-content">Services</div>
+        <div class="window-content">
+          <iframe src="services.html" title="'services"></iframe>
+        </div>
         <div class="resize-handle" id="servicesWindow-resize-handle"></div>
       </div>
-      <img src="assets/Fatdog-0001.gif" alt="dog" id="clippy">
+      <div id="paintWindow" class="window">
+        <div class="title-bar" id="paintWindow-title-bar">
+          Paint
+          <button class="close-btn" onclick="closeWindow('paintWindow')">
+            X
+          </button>
+        </div>
+        <div class="window-content">
+          <iframe
+            src="https://tyleret.github.io/Etch-o-Sketch/"
+            title="paint"
+          ></iframe>
+        </div>
+        <div class="resize-handle" id="paintWindow-resize-handle"></div>
+      </div>
+      <img src="assets/Fatdog-0001.gif" alt="dog" id="clippy" />
     </div>
     <script src="script.js"></script>
   </body>
   <footer>
     <div id="taskbarMenu">
       <div class="taskMenuItem">
-        <button class="btn" id="aboutMeTaskMenu">  
-          <img src='assets/display_properties-4.png' alt="Computer with paint brush and ruler icon">
-          <p>About Me</p>
-        </button>
+        <a href="/">
+          <button class="btn" id="homePageTaskMenu">
+            <img src="assets/computer-4.png" alt="Computer Icon" />
+            <p>Home Page</p>
+          </button>
+        </a>
       </div>
       <div class="taskMenuItem">
-        <button class="btn" id="contactMeTaskMenu">  
-          <img src='assets/outlook_express-4.png' alt="Email icon"><p>Contact Me</p>
-        </button>
+        <a href="about-us.html">
+          <button class="btn" id="aboutMeTaskMenu">
+            <img
+              src="assets/display_properties-4.png"
+              alt="Computer with paint brush and ruler icon"
+            />
+            <p>About Me</p>
+          </button>
+        </a>
       </div>
       <div class="taskMenuItem">
-        <button class="btn" id="aboutMeTaskMenu">  
-          <img src='assets/globe_map-0.png' alt="Globe icon"><p>Coverage Area</p>
-
-        </button>
+        <a href="contact.html">
+          <button class="btn" id="contactMeTaskMenu">
+            <img src="assets/outlook_express-4.png" alt="Email icon" />
+            <p>Contact Me</p>
+          </button>
+        </a>
       </div>
       <div class="taskMenuItem">
-        <button class="btn" id="aboutMeTaskMenu">  
-          <img src='assets/directory_closed-4.png' alt="Calendar icon"><p>Services</p>
-
-        </button>
+        <a href="coverage.html">
+          <button class="btn" id="aboutMeTaskMenu">
+            <img src="assets/globe_map-0.png" alt="Globe icon" />
+            <p>Coverage Area</p>
+          </button>
+        </a>
+      </div>
+      <div class="taskMenuItem">
+        <a href="services.html">
+          <button class="btn" id="aboutMeTaskMenu">
+            <img src="assets/directory_closed-4.png" alt="Calendar icon" />
+            <p>Services</p>
+          </button>
+        </a>
       </div>
     </div>
     <div id="taskbar">
-      <div id="start-button" class='btn' onclick='toggleNav()'>Navigation</div>
+      <div id="start-button" class="btn" onclick="toggleNav()">Navigation</div>
     </div>
   </footer>
 </html>
