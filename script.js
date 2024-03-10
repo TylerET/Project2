@@ -1,3 +1,6 @@
+// z index counter so when you move a window it will appear over other windows
+let zIndexMax = 0;
+
 // Make elements draggable
 function dragElement(element) {
   let pos1 = 0,
@@ -18,6 +21,7 @@ function dragElement(element) {
     //This takes the current position of the mouse/widow, so that we can compare it to the new position once dragged
     pos3 = e.clientX;
     pos4 = e.clientY;
+    zIndexMax++;
     document.onmouseup = removeMouseEvents;
     document.onmousemove = elementDrag;
   }
@@ -31,6 +35,7 @@ function dragElement(element) {
     pos4 = e.clientY;
     element.style.top = element.offsetTop - pos2 + "px";
     element.style.left = element.offsetLeft - pos1 + "px";
+    element.style.zIndex = zIndexMax;
   }
 
   function removeMouseEvents() {

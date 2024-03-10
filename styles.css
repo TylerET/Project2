@@ -110,3 +110,12 @@ iframe {
   border-color: transparent transparent #5f5e5e transparent;
   cursor: nwse-resize;
 }
+
+img {
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  z-index: 0;
+}
